@@ -128,7 +128,7 @@ void deleteAtAny(int pos)
         d = d->next;
         i++;
     }
-    while (j < i)
+    while (j < pos-1)
     {
         h = h->next;
         j++;
