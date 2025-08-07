@@ -42,8 +42,8 @@ void createlist(int n)
 }
 void display()
 {
-    node *e,*o;
-    e=o = head;
+    node *e, *o;
+    e = o = head;
     if (head == NULL)
     {
         printf("Empty list!!!\n");
@@ -52,31 +52,29 @@ void display()
     printf("even list print:->\n");
     while (e != NULL)
     {
-        if(e->data%2==0)
+        if (e->data % 2 == 0)
         {
-            printf("%d -> ",e->data);
-            e=e->next;
+            printf("%d -> ", e->data);
+            e = e->next;
         }
         else
         {
-            e=e->next;
+            e = e->next;
         }
-
     }
     printf("NULL\n");
     printf("odd list print:->\n");
     while (o != NULL)
     {
-        if(o->data%2!=0)
+        if (o->data % 2 != 0)
         {
-            printf("%d -> ",o->data);
-            o=o->next;
+            printf("%d -> ", o->data);
+            o = o->next;
         }
         else
         {
-            o=o->next;
+            o = o->next;
         }
-
     }
     printf("NULL\n");
 }
