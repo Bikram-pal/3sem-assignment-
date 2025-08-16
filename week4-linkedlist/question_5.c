@@ -1,16 +1,16 @@
 // Given a singly linked list of size N. The task is to swap elements in the linked list pairwise. For example, if the input list is 1 2 3 4, the resulting list after swaps will be 2 1 4 3.
 
-#include<stdio.h>
-#include<stdlib.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 typedef struct node
 {
     int data;
-    struct node * next;
-}node;
+    struct node *next;
+} node;
 
-node * head = NULL;
-node * tail = NULL;
+node *head = NULL;
+node *tail = NULL;
 
 void createList(int n)
 {
@@ -37,15 +37,15 @@ void createList(int n)
 
 void swap()
 {
-    node * h;
-    h=head;
-    while(h!=NULL&&h->next!=NULL)
+    node *h;
+    h = head;
+    while (h != NULL && h->next != NULL)
     {
         int temp;
-        temp=h->data;
-        h->data=h->next->data;
-        h->next->data=temp;
-        h=h->next->next;
+        temp = h->data;
+        h->data = h->next->data;
+        h->next->data = temp;
+        h = h->next->next;
     }
 }
 void display()
@@ -68,7 +68,7 @@ void display()
 
 int main()
 {
-    while(1)
+    while (1)
     {
         printf("1. create List: \n");
         printf("2. swap: \n");
@@ -77,33 +77,33 @@ int main()
 
         int ops;
         printf("press 1-4: ");
-        scanf("%d",&ops);
+        scanf("%d", &ops);
 
         switch (ops)
         {
-            case 1:
-            {
-                int n;
-                printf("How many element if you want: ");
-                scanf("%d",&n);
-                createList(n);
-                break;
-            }
-            case 2:
-            {
-                swap();
-                break;
-            }
-            case 3: 
-            {
-                display();
-                break;
-            }
-            case 4:
-            {
-                exit(0);
-                break;
-            }
+        case 1:
+        {
+            int n;
+            printf("How many element if you want: ");
+            scanf("%d", &n);
+            createList(n);
+            break;
+        }
+        case 2:
+        {
+            swap();
+            break;
+        }
+        case 3:
+        {
+            display();
+            break;
+        }
+        case 4:
+        {
+            exit(0);
+            break;
+        }
         default:
             break;
         }
